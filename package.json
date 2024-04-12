@@ -1,0 +1,39 @@
+{
+  "name": "astro-storyblok-image-service",
+  "author": "Claudia Benito (https://www.claudiabdm.com)",
+  "description": "Integration of Storyblok image service into Astro image service API",
+  "type": "module",
+  "version": "0.0.1",
+  "exports": {
+    ".": "./src/service/index.ts",
+    "./components": "./src/components/index.ts",
+    "./types": "./src/types/index.ts"
+  },
+  "files": [
+    "/src/service",
+    "/src/components",
+    "/src/types"
+  ],
+  "keywords": [
+    "astro",
+    "withastro",
+    "astro-image",
+    "storyblok",
+    "image service"
+  ],
+  "scripts": {
+    "dev": "cd demo && astro dev",
+    "build": "cd demo && astro build",
+    "preview": "cd demo && astro check && astro preview",
+    "test": "vitest --coverage"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.5.10",
+    "astro": "^4.5.18",
+    "typescript": "^5.4.4"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^1.4.0",
+    "vitest": "^1.4.0"
+  }
+}

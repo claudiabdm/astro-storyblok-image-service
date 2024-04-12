@@ -1,0 +1,77 @@
+---
+import { Image } from 'astro-storyblok-image-service/components';
+---
+
+<script>
+	const img = document.getElementById("astroImage");
+	const outputURL = document.getElementById("outputURL");
+
+	if (outputURL && img && img instanceof HTMLImageElement) {
+		outputURL.textContent = img.src;
+	}
+</script>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link
+			rel="icon"
+			type="image/svg+xml"
+			href="/favicon.svg"
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width"
+		/>
+		<meta
+			name="generator"
+			content={Astro.generator}
+		/>
+		<title>Astro Storyblok Image Service</title>
+	</head>
+	<body>
+		<div>
+			<h2>HTML img</h2>
+			<img
+				alt=""
+				src="https://a.storyblok.com/f/39898/3310x2192/e4ec08624e/demo-image.jpeg"
+				class="image"
+			/>
+			<div>
+				https://a.storyblok.com/f/39898/3310x2192/e4ec08624e/demo-image.jpeg
+			</div>
+		</div>
+		<div>
+			<h2>Astro Image + Storyblok Image Service</h2>
+			<Image
+				id="astroImage"
+				alt=""
+				src="https://a.storyblok.com/f/39898/3310x2192/e4ec08624e/demo-image.jpeg"
+				widths={[300, 600, 1200]}
+				quality={10}
+				blur={10}
+				class="image"
+				inferSize
+			/>
+			<div id="outputURL"></div>
+		</div>
+	</body>
+</html>
+
+<style>
+	* {
+		box-sizing: border-box;
+	}
+	body {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 20px;
+		font-family: sans-serif;
+		line-height: 1.5;
+	}
+	.image {
+		max-width: 100%;
+		height: auto;
+		margin-bottom: 10px;
+	}
+</style>
