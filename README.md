@@ -3,10 +3,10 @@ Integrate [Storyblok image service](https://www.storyblok.com/docs/image-service
 
 ## Getting Started
 
-### Installation
+### Installation
 
 ```bash
-npm install astro-storyblok-image-service
+npm install -D astro-storyblok-image-service
 ```
 
 ### Usage
