@@ -3,7 +3,7 @@
   "author": "Claudia Benito (https://www.claudiabdm.com)",
   "description": "Integration of Storyblok image service into Astro image service API",
   "type": "module",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "exports": {
     ".": "./src/service/index.ts",
     "./components": "./src/components/index.ts",
